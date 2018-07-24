@@ -1,4 +1,6 @@
-/* Core Style */
+/*
+###### MAIN STYLING ######
+*/
 
 *{
   box-sizing: border-box;
@@ -22,20 +24,38 @@ img {
   width: 100%;
 }
 
+.full-width-img {
+  margin: 0 -2.5rem;
+}
+
 li {
   list-style-type: none;
 }
 
+ul {
+  padding: 0;
+}
+
+.desktop-size {
+  display: none;
+}
+
+.new-line {
+  display: block;
+}
+
 /* Fonts */
 
-.topnav, h1, h2, h3, h4 {
+.topnav, h1, h2, h3, h4, h5, h6{
   font-family: 'Nunito', sans-serif;
+  margin: 0;
 }
 
 p {
   font-family: 'Lato', sans-serif;
   line-height: 1.6;
   font-size: 1.6rem;
+  margin: 0;
 }
 
 h1 {
@@ -55,8 +75,71 @@ h3 {
   line-height: 1.5;
 }
 
+h5 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+h6 {
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+
+.heading {
+  font-weight: 840;
+  letter-spacing: 0.5rem;
+  line-height: 2.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 3.5rem 0;
+}
+
 .title {
-  font-weight: 700;
+  color:#487F84;
+  font-weight: 650;
+  margin: 3rem 0 2rem 0;
+  text-transform: uppercase;
+}
+
+.sub-title {
+  color: #4F3F4A;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 2.7rem;
+}
+
+.small-text {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+/* Numbered List */
+
+.first-line {
+  padding-bottom: 1rem;
+}
+
+.number-list {
+  list-style-position: outside;
+  padding-left: 1.5rem;
+}
+
+.number-list li{
+  font-family: 'Lato', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  list-style-type: decimal;
+}
+
+.number-list :not(:last-child){
+  padding-bottom: 1.6rem;
 }
 
 /* Call-to-action */
@@ -66,16 +149,31 @@ h3 {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.6rem;
   font-weight: 450;
+  display: block;
+  margin: 2rem 0;
+}
+
+.link i {
+  position: relative;
+  top: 0.4rem;
+  left: 0.3rem;
+  font-size: 2.5rem;
+}
+
+#offset-margin {
+  margin-top: -1rem;
 }
 
 .button {
-  border: 1px solid;
+  border: 1.2px solid;
+  border-radius: 0.3rem;
   display: inline-block;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.6rem;
-  padding: 1rem 1.5rem;
+  padding: 1.2rem 1.5rem;
   text-align: center;
   white-space: nowrap;
+  width: auto;
 }
 
 /* Overlay */
@@ -138,6 +236,7 @@ h3 {
 .topnav {
   display: flex;
   padding: 0;
+  line-height: 3rem;
 }
 
 .topnav .logo {
@@ -153,7 +252,10 @@ h3 {
 .topnav .menu i {
   color: #BC519E;
   font-size: 3.5rem;
-  padding-top: 1.2rem;
+}
+
+#white {
+  color: #FFF;
 }
 
 .logo {
@@ -165,6 +267,63 @@ h3 {
   display: none;
 }
 
+/* Footer */
+
+.footer {
+  color: white;
+  text-align: center;
+
+}
+.message-box {
+  background-color:#BC519E;
+  padding: 3rem 2.5rem;
+}
+
+.message-box h3 {
+  margin: 2.5rem 0;
+}
+
+#contact {
+  background-color: white;
+}
+
+#resume {
+  margin: 2.5rem 3rem 0 3rem;
+  clear: left;
+}
+
+#contact a {
+  color: #BC519E;
+}
+
+#resume a {
+  color: #FFFFFF;
+}
+
+.footer-box {
+  background-color: #487F84;
+  padding: 2rem 2.5rem;
+}
+
+.footer-box p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 350;
+}
+
+.social-media {
+  display: flex;
+  padding: 0 3rem;
+}
+
+.social-media > li {
+  font-size: 3rem;
+  flex-grow: 1;
+}
+
+/*
+###### HOMEPAGE STYLING ######
+*/
+
 /* Hero */
 .hero {
   margin: 8rem 2.5rem 0 2.5rem;
@@ -172,10 +331,12 @@ h3 {
 
 .hero > h2 {
   letter-spacing: -1px;
+  margin-top: 2.5rem;
 }
 
 .hero > h3 {
   color: #5B5B5B;
+  margin-top: 2.5rem;
 }
 
 .green-text {
@@ -197,7 +358,7 @@ h3 {
   top: 7rem;
   position: relative;
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 #project-cta-text {
@@ -239,7 +400,7 @@ h3 {
   position: relative;
   color: white;
   margin: 0 2.5rem;
-  top:10rem;
+  top:12rem;
   height: 43rem;
 }
 
@@ -249,20 +410,13 @@ h3 {
   letter-spacing: 2.6px;
 }
 
-.project-info > .subtitle {
-  font-family: 'Nunito', sans-serif;
-  font-size: 1.8rem;
-  font-weight: 500;
-  line-height: 2.7rem;
-}
-
 #btn-case-study a {
   color: white;
   padding: 0;
 }
 
 #btn-case-study {
-  margin: 1.2rem 0;
+  margin: 1rem 0 2rem 0;
 }
 
 /* Intro */
@@ -271,14 +425,11 @@ h3 {
   position: relative;
   top: 0;
   background-color: #EAE7E9;
-  padding: 1.5rem 2.5rem 3rem 2.5rem;
+  padding: 1.5rem 2.5rem;
 }
 
-#intro-arrow {
-  position: relative;
-  top: 0.4rem;
-  left: 0.3rem;
-  font-size: 2.5rem;
+.intro-box h3 {
+  margin-top: 1rem;
 }
 
 /* Process */
@@ -286,66 +437,532 @@ h3 {
   margin: 3rem 2.5rem;
 }
 
+.process h3 {
+  font-weight: 700;
+}
+
 .process-ux > img {
   width: 80%;
   height: auto;
-  margin: 0 auto;
+  margin: 2rem auto;
 }
 
 .process-ui > img {
   width: 80%;
   height: auto;
+  margin: 2rem auto;
+}
+
+/*
+###### SEAMHUB STYLING ######
+*/
+
+/* ### Project Intro ### */
+
+.seamhub-bkg {
+  background: url("../images/projects/seamhub/bkg.png") #00A699;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 53rem;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.project-intro {
+  margin: 6rem 2.5rem 4rem 2.5rem;
+  text-align: center;
+}
+
+#seamhub-logo {
+  height: auto;
+  max-width: 18rem;
   margin: 0 auto;
 }
 
-/* Footer */
-
-.footer {
+#raleway-text {
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 0.16rem;
+  line-height: 1.5;
   color: white;
+  font-weight: 500;
+  margin: 2.5rem 0;
+}
+
+#seamhub-display {
+  box-shadow: 0 0.3rem 0.4rem grey;
+}
+
+#project-label {
+  margin: 3rem;
+}
+
+.call-to-action {
   text-align: center;
-
-}
-.message-box {
-  background-color:#BC519E;
-  padding: 2.5rem 2.5rem;
 }
 
-#new-line {
-  display: block;
+.btn-mobile {
+  background-color: #BC519E;
+  border-color: #BC519E;
 }
 
-#contact {
-  background-color: white;
+.btn-mobile a {
+  color: white;
 }
 
-#resume {
-  margin: 2rem 4rem;
+.btn-desktop {
+  border-color: #BC519E;
+  margin-top: 2rem;
 }
 
-#contact a {
+.btn-desktop a {
   color: #BC519E;
 }
 
-#resume a {
-  color: #FFFFFF;
+/* ### Overview ### */
+
+.overview {
+  margin: 0 2.5rem;
 }
 
-.footer-box {
+.spec {
+  border-left: solid 2px #487F84;
+  border-right: solid 2px #487F84;
+  border-bottom: solid 2px #487F84;
+  border-radius: 2.1rem;
+  text-align: center;
+  width: 30rem;
+  margin: 3rem auto;
+}
+
+.spec h5 {
   background-color: #487F84;
-  padding: 2rem 2.5rem;
+  border: solid 2px #487F84;
+  border-radius: 2rem 2rem 0 0;
+  color: #FFF;
+  font-weight: 600;
+  margin: 0;
+  padding: 0.6rem;
+  text-transform: none;
 }
 
-.footer-box p {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 350;
+.spec ul {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    padding: 1rem;
+    margin: 0;
 }
 
-.social-media {
+/* ### Discovery & Strategy ### */
+
+.discovery {
+  margin: 0 2.5rem;
+}
+
+/* User Research */
+
+.finding-grid {
   display: flex;
-  padding: 0 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.social-media > li {
+.finding {
+  border: solid 3px #D3DEDE;
+  border-radius: 19px;
+  height: 20rem;
+  margin-bottom: 1.5rem;
+  margin-right: 1.5rem;
+  text-align: center;
+  width: 15rem;
+}
+
+.finding h2 {
   font-size: 3rem;
-  flex-grow: 1;
+  font-weight: 650;
+  margin: 1.6rem 0;
+}
+
+.finding p {
+  font-size: 1.4rem;
+  line-height: 1.3;
+  padding: 0 1.4rem;
+}
+
+.project-dir-box {
+  background-color: #D3DEDE;
+  padding: 2rem;
+  padding: 2.5rem 2.5rem;
+  margin-top: 2.5rem;
+}
+
+.project-dir-box p {
+  text-align: center;
+  font-weight: 600;
+}
+
+.project-dir-box ol {
+  padding: 0 1.6rem;
+}
+
+/* User Persona */
+
+.persona {
+  margin: 3rem 0;
+}
+
+.persona h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.0rem;
+  font-weight: 600;
+  margin: 3rem 0 2rem 0;
+}
+
+.persona-role {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #487F84;
+  margin: 3rem 0 1rem 0;
+}
+
+.persona-info {
+  text-align: center;
+  font-family: 'nunito', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.quote {
+  letter-spacing: 0.25rem;
+  line-height: 1.5;
+}
+
+/* Competitive Analysis */
+
+.comp-logo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+  "one one"
+  "two three";
+  margin: 3.5rem 0 2.5rem 0;
+}
+
+#dropbox {
+  grid-area: one;
+  justify-self: center;
+  margin-bottom: 2rem;
+}
+
+#pinterest {
+  grid-area: two;
+  justify-self: center;
+}
+
+#icloud {
+  grid-area: three;
+  justify-self: center;
+}
+
+.comp-logo img {
+  max-width: 16rem;
+  height: auto;
+}
+
+/* ### Information Architecture ### */
+
+.info-arch {
+  margin: 0 2.5rem;
+}
+
+/* User Flow */
+
+.userflow-bkg .userflow-img {
+  background: url('../images/projects/seamhub/user-flow-bkg.png');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 150%;
+  height: 17rem;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.userflow-text {
+  height: 17rem;
+}
+
+.userflow-text p {
+  position: relative;
+  font-style: italic;
+  top: 2rem;
+  line-height: 3rem;
+  font-weight: 600;
+  height: auto;
+  width: auto;
+  padding: 0;
+  background-color: rgb(241, 241, 241, 0.6);
+}
+
+/* Wireframe */
+
+.wireframe-banner, .lo-fi-img {
+  margin-top: 3rem;
+}
+
+#add-margin {
+  margin-bottom: 3rem;
+}
+
+/* ### Branding ### */
+
+.branding {
+  margin: 0 2.5rem;
+}
+
+.seamhub-brand {
+  background-color: #183038;
+  margin-top: 2.5rem;
+  color: white;
+  padding: 2.5rem 2.5rem;
+  text-align: center;
+}
+
+.logo-sketch-desktop {
+  display: none;
+}
+
+.logo-sketch-mobile {
+  margin-top: 3rem;
+}
+
+#big-arrow {
+  width: 50%;
+  height: auto;
+  margin: 1rem auto 0 auto;
+
+}
+
+.logo-var {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+/* Typograhy */
+
+#raleway-box, #opensans-box {
+  border: solid 1px #D9D9D9;
+  border-radius: 20px;
+  width: 16rem;
+  display: inline-block;
+  padding: 1rem 1rem;
+  margin: 1rem 0 2.5rem 0;
+}
+
+#opensans-box {
+  margin-left: 1rem;
+}
+
+.raleway {
+  font-family: 'Raleway', sans-serif;
+}
+
+.opensans {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.font {
+  text-align: right;
+  font-size: 1.4rem;
+}
+
+.font-example {
+  font-size: 4.2rem;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.font-style {
+  font-size: 1.4rem;
+}
+
+/* Color Palette */
+
+.color-sample {
+  display: flex;
+}
+
+.color-sample li {
+  margin-right: 2.5rem;
+}
+
+.color-text {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.color-shape {
+  border-radius: 50%;
+  height: 5.5rem;
+  width: 5.5rem;
+  margin: 0 auto;
+}
+
+.oxford {
+  background-color: #183038;
+}
+
+.persian {
+  background-color: #00A699
+}
+
+.white {
+  background-color: #FFFFFF;
+  border: solid 1px #EAE7E9;
+}
+
+.blue {
+  background-color: #4484CE;
+}
+
+.green {
+  background-color: #75CEC7;
+}
+
+.orange {
+  background-color: #F19F4D;
+}
+
+.yellow {
+  background-color: #F9CF00;
+}
+
+.accent {
+  margin: 2.5rem 0 3rem 0;
+}
+
+/* ### Interaction & Visual Design ### */
+
+.visual {
+  margin: 0 2.5rem;
+}
+
+/* Preference Test */
+
+.ab-test {
+  text-align: center;
+}
+
+.ab-test-title {
+  color: #487F84;
+  margin: 2.5rem 0;
+}
+
+.ab-test img {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+.screen {
+  background-color: #4BB8C9;
+  margin: 2rem -2.5rem;
+  padding: 2rem 0;
+}
+
+.screen h1 {
+  font-size: 3rem;
+  margin: 2rem 0;
+}
+
+.change-user-test {
+  background-color: #EBA85D;
+  margin: 2rem -2.5rem;
+  padding: 2.5rem 0;
+}
+
+.change-user-test h6 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.mobile-size img {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.number-icon {
+  width: 2.2rem;
+  height: auto;
+  vertical-align: top;
+}
+
+.change-details {
+  width: 95%;
+  padding-left: 2.5rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.change-details p {
+  padding: 2rem 0 0.3rem 1.2rem;
+}
+
+.change-details img {
+  padding-top: 2.2rem;
+}
+
+/* Final Product */
+
+.final-project-image img {
+  margin: 2rem 0;
+}
+
+
+
+/* ### Summary ### */
+
+.summary {
+  margin: 0 2.5rem;
+}
+
+.sum-statement {
+  background-color: #D3DEDE;
+  padding: 2rem 2rem;
+}
+
+.sum-statement h6 {
+  font-weight: 400;
+  letter-spacing: 1.2px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.add-margin {
+  margin-bottom: 2rem;
+}
+
+.less-margin {
+  margin-top: 2.5
+}
+
+#last-p {
+  margin-bottom: 3rem;
+}
+
+#less-margin {
+  margin-top: 3rem;
 }
