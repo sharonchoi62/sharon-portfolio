@@ -13,19 +13,24 @@ html {
 .container {
   width: 100%;
   color: #3B3B3B;
+  padding: 0 2.5rem;
 }
 
-a {
+.full-width-img {
+  margin: 0 -2.5rem;
+}
+
+.new-line {
+  display: block;
+}
+
+a:link, a:visited {
   text-decoration: none;
 }
 
 img {
   display: block;
   width: 100%;
-}
-
-.full-width-img {
-  margin: 0 -2.5rem;
 }
 
 li {
@@ -40,8 +45,95 @@ ul {
   display: none;
 }
 
-.new-line {
-  display: block;
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 0 8rem;
+  }
+  .full-width-img {
+    margin: 0 -8rem;
+  }
+  .new-line {
+    display: inline;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .homepage {
+    display: grid;
+    grid-column-gap: 4rem;
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-areas:
+      "navbar navbar navbar"
+      ". hero ."
+      "project project project"
+      "intro intro intro"
+      ". process ."
+      "footer footer footer";
+    padding: 0 15rem;
+  }
+
+  .navbar {
+    grid-area: navbar;
+  }
+
+  .hero {
+    grid-area: hero;
+  }
+
+  .project {
+    grid-area: project;
+  }
+
+  .intro {
+    grid-area: intro;
+  }
+
+  .process {
+    grid-area: process;
+  }
+
+  .footer {
+    grid-area: footer;
+  }
+
+  .desktop-size {
+    display: block;
+  }
+
+  .full-width-img {
+    margin: 0 -15rem;
+  }
+
+  .new-line-desktop {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    padding: 0 15rem;
+  }
+
+  .full-width-img {
+    margin: 0 -15rem;
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: [line1] 2fr [line3] 6fr;
+    grid-gap: 4rem;
+    margin: 3rem 0;
+  }
+
+  .content-title {
+    grid-column-start: line1;
+    /* align-self: flex-start; */
+  }
+
+  .content-text {
+    grid-column-start: line3;
+  }
+
 }
 
 /* Fonts */
@@ -115,9 +207,77 @@ h6 {
   line-height: 2.7rem;
 }
 
+.label-text {
+  font-family: 'lato', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 3.0rem;
+  letter-spacing: 0.1rem;
+}
+
 .small-text {
   font-size: 1.4rem;
   font-weight: 400;
+}
+
+@media screen and (min-width: 768px) {
+  .heading {
+    margin: 5rem 0;
+  }
+
+  .title {
+    margin: 4rem 0 3rem 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+  p {
+    font-size: 2rem;
+  }
+
+  h1 {
+    font-size: 5.4rem;
+  }
+
+  h2 {
+    font-size: 3.2rem;
+  }
+
+  h3 {
+    font-size: 2.8rem;
+  }
+
+  h5 {
+    font-size: 2.6rem;
+  }
+
+  h6 {
+    font-size: 2.4rem;
+  }
+
+  .label, .label-text {
+    font-size: 2.6rem;
+    line-height: 5.0rem;
+  }
+
+  .small-text {
+    font-size: 1.8rem;
+    font-weight: 400;
+  }
+
+  .title {
+    margin: 0;
+  }
+
+  .heading {
+    letter-spacing: 1rem;
+  }
+
+  .sub-title {
+    line-height: 1.2;
+    margin-bottom: 2rem;
+  }
 }
 
 /* Numbered List */
@@ -170,10 +330,19 @@ h6 {
   display: inline-block;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.6rem;
-  padding: 1.2rem 1.5rem;
+  padding: 1.2rem 1rem;
   text-align: center;
   white-space: nowrap;
-  width: auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .link {
+    font-size: 2rem;
+  }
+
+  .button {
+    font-size: 2.2rem;
+  }
 }
 
 /* Overlay */
@@ -230,18 +399,21 @@ h6 {
 
 /* Navbar */
 .navbar {
-  margin: 2.5rem 2.5rem;
+  margin-top: 5rem;
 }
 
 .topnav {
   display: flex;
   padding: 0;
   line-height: 3rem;
+  align-items: center;
 }
 
 .topnav .logo {
   flex-grow: 12;
   text-align: left;
+  height: auto;
+  max-width: 7rem;
 }
 
 .topnav .menu {
@@ -254,17 +426,70 @@ h6 {
   font-size: 3.5rem;
 }
 
+.topnav .nav a {
+  color: #3B3B3B;
+  text-decoration: none;
+}
+
 #white {
   color: #FFF;
 }
 
-.logo {
-  height: auto;
-  max-width: 7rem;
-}
-
 .nav {
   display: none;
+}
+
+.contact-btn {
+  border: solid 1.5px #BC519E;
+}
+
+#white-border {
+  border-color: white;
+}
+
+.contact-btn a {
+  color: #BC519E;
+}
+
+.nav-item {
+  width: 12rem;
+
+}
+
+@media screen and (min-width: 768px) {
+  .menu {
+    display: none;
+  }
+
+  .topnav .logo {
+    flex-grow: 2;
+    height: auto;
+    max-width: 8rem;
+  }
+
+  .nav {
+    display: flex;
+    flex-grow: 10;
+    font-size: 1.8rem;
+    justify-content: flex-end;
+    text-align: center;
+    margin-top: 1rem;
+    align-items: baseline;
+  }
+}
+
+@media screen and (min-width: 1042px) {
+  .nav {
+    font-size: 2.2rem;
+  }
+
+  .topnav .logo {
+    max-width: 13rem;
+  }
+
+  .nav-item {
+    width: 15rem;
+  }
 }
 
 /* Footer */
@@ -272,24 +497,26 @@ h6 {
 .footer {
   color: white;
   text-align: center;
-
 }
+
 .message-box {
   background-color:#BC519E;
   padding: 3rem 2.5rem;
 }
 
-.message-box h3 {
-  margin: 2.5rem 0;
+.message-box > h3 {
+  padding: 2.5rem 0;
+}
+
+.message-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #contact {
   background-color: white;
-}
-
-#resume {
-  margin: 2.5rem 3rem 0 3rem;
-  clear: left;
+  margin-bottom: 2rem;
 }
 
 #contact a {
@@ -302,22 +529,80 @@ h6 {
 
 .footer-box {
   background-color: #487F84;
-  padding: 2rem 2.5rem;
+  padding: 2rem 0;
 }
 
 .footer-box p {
   font-family: 'Montserrat', sans-serif;
   font-weight: 350;
+  padding: 1rem 2.5rem;
 }
 
 .social-media {
   display: flex;
-  padding: 0 3rem;
+  justify-content: center;
 }
 
 .social-media > li {
   font-size: 3rem;
-  flex-grow: 1;
+  padding: 0 2rem;
+}
+
+
+@media screen and (min-width: 768px) {
+  .message-btn {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  #text-padding {
+    padding: 3rem 8rem;
+  }
+
+  #contact {
+    background-color: white;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer {
+    text-align: left;
+  }
+
+  .message-box {
+    padding-left: 15rem;
+    padding-top: 4rem;
+    text-align: left;
+  }
+
+  .message-btn {
+    padding-left: 0;
+    justify-content: flex-start;
+  }
+
+  #contact {
+    margin-left: 0;
+  }
+
+  .footer-box {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .social-media {
+    display: flex;
+    padding-right: 15rem;
+  }
+
+  .footer-box > p {
+    font-size: 1.8rem;
+    padding-left: 15rem;
+  }
+
 }
 
 /*
@@ -326,7 +611,7 @@ h6 {
 
 /* Hero */
 .hero {
-  margin: 8rem 2.5rem 0 2.5rem;
+  margin-top: 10rem;
 }
 
 .hero > h2 {
@@ -348,6 +633,26 @@ h6 {
   display: block;
 }
 
+@media screen and (min-width: 768px) {
+  .hero {
+    margin-top: 12rem;
+  }
+
+  .hero > h2 {
+    margin-top: 1rem;
+  }
+
+  .hero > h3 {
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero {
+    margin-top: 17rem;
+  }
+}
+
 /* Project */
 
 #project-section {
@@ -355,7 +660,7 @@ h6 {
 }
 
 .project-cta {
-  top: 7rem;
+  top: 8rem;
   position: relative;
   text-align: center;
   margin-top: 2rem;
@@ -375,8 +680,8 @@ h6 {
 
 .project-screen {
   position: relative;
-  top: 10rem;
-  width: 90%;
+  top: 9rem;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -385,7 +690,7 @@ h6 {
   text-align: center;
 }
 
-.project-display .project-bkg-image {
+.project-display .project-bkg-img {
   background: url('../images/homepage/seamhub-bkg-mobile.png');
   background-position:bottom;
   background-repeat: no-repeat;
@@ -399,8 +704,7 @@ h6 {
 .project-info {
   position: relative;
   color: white;
-  margin: 0 2.5rem;
-  top:12rem;
+  top:10rem;
   height: 43rem;
 }
 
@@ -416,25 +720,115 @@ h6 {
 }
 
 #btn-case-study {
-  margin: 1rem 0 2rem 0;
+  margin: 4% 0 6% 0;
+}
+
+.project-section-desktop {
+  margin-top: 17rem;
+}
+
+@media screen and (min-width: 768px) {
+  .project-screen {
+    position: relative;
+    top: 9rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .project-cta {
+    text-align: right;
+  }
+
+  .project-section {
+    display: none;
+  }
+
+  .project-cta {
+    top: 12rem;
+  }
+
+  #project-cta-text {
+    font-size: 2.2rem;
+  }
+
+  #project-cta-icon {
+    width: 4rem;
+    left: 1rem;
+    top: 3rem;
+  }
+
+  .project-info {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .project-info > h2 {
+    font-size: 5.6rem;
+    letter-spacing: 6px;
+  }
+
+  /* Hover Overlap */
+
+  .project-section-desktop {
+    position: relative;
+  }
+
+  .project-screen-wbkg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .project-display {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(24, 48, 56, 0.9);
+  }
+
+  .project-section-desktop:hover .project-screen-wbkg  {
+    opacity: 0.3;
+  }
+
+  .project-section-desktop:hover .project-display {
+    opacity: 1;
+  }
 }
 
 /* Intro */
 
-.intro-box {
-  position: relative;
-  top: 0;
+.grey-box {
   background-color: #EAE7E9;
-  padding: 1.5rem 2.5rem;
 }
 
-.intro-box h3 {
-  margin-top: 1rem;
+.intro-text {
+  padding: 2.5rem 2.5rem 1rem 2.5rem;
+}
+
+
+@media screen and (min-width: 768px) {
+  .intro-text {
+    padding: 2.5rem 8rem 1rem 8rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+ .intro-text {
+    padding: 2.5rem 30rem 1rem 30rem;
+  }
 }
 
 /* Process */
 .process {
-  margin: 3rem 2.5rem;
+  margin: 2.5rem 0;
 }
 
 .process h3 {
@@ -452,6 +846,37 @@ h6 {
   height: auto;
   margin: 2rem auto;
 }
+
+@media screen and (min-width: 1024px) {
+  .process {
+    align-items: center;
+    display: grid;
+    grid-column: 1fr 1fr;
+    grid-row: 1fr 1fr;
+    grid-gap: 4rem;
+    grid-template-areas:
+    "ux-text ux-image"
+    "ui-image ui-text";
+  }
+
+  .ux-text {
+    grid-area: ux-text;
+  }
+
+  .ux-image {
+    grid-area: ux-image;
+  }
+
+  .ui-text {
+    grid-area: ui-text;
+  }
+
+  .ui-image {
+    grid-area: ui-image;
+  }
+
+}
+
 
 /*
 ###### SEAMHUB STYLING ######
@@ -472,8 +897,8 @@ h6 {
 }
 
 .project-intro {
-  margin: 6rem 2.5rem 4rem 2.5rem;
   text-align: center;
+  padding-top: 6rem;
 }
 
 #seamhub-logo {
@@ -488,7 +913,7 @@ h6 {
   line-height: 1.5;
   color: white;
   font-weight: 500;
-  margin: 2.5rem 0;
+  margin: 4rem 0;
 }
 
 #seamhub-display {
@@ -496,10 +921,12 @@ h6 {
 }
 
 #project-label {
-  margin: 3rem;
+  margin: 4rem 0;
 }
 
 .call-to-action {
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
 
@@ -521,11 +948,53 @@ h6 {
   color: #BC519E;
 }
 
-/* ### Overview ### */
+@media screen and (min-width: 768px) {
+  .seamhub-bkg {
+    /* min-height: 56rem; */
+  }
 
-.overview {
-  margin: 0 2.5rem;
+  .call-to-action {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .btn-desktop {
+    border-color: #BC519E;
+    margin-top: 0;
+  }
 }
+
+@media screen and (min-width: 1024px) {
+  .seamhub-bkg {
+    min-height: 85rem;
+  }
+}
+
+/* ### Section Menu ### */
+
+@media screen and (min-width: 1024px) {
+  .section-nav {
+    align-items: center;
+    background-color: rgba(234, 231, 233, 0.43);
+    display: flex;
+    justify-content: space-between;
+    margin: 8rem 0;
+    padding: 2rem 15rem;
+    text-align: center;
+  }
+
+  .section-nav a {
+    color: #6F676D;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 450;
+    letter-spacing: -1%;
+  }
+}
+
+
+
+/* ### Overview ### */
 
 .spec {
   border-left: solid 2px #487F84;
@@ -548,7 +1017,7 @@ h6 {
   text-transform: none;
 }
 
-.spec ul {
+.spec ul{
     font-family: 'Lato', sans-serif;
     font-size: 1.6rem;
     line-height: 1.6;
@@ -556,11 +1025,72 @@ h6 {
     margin: 0;
 }
 
-/* ### Discovery & Strategy ### */
 
-.discovery {
-  margin: 0 2.5rem;
-}
+@media screen and (min-width: 768px) {
+
+  .spec-one, .spec-two {
+    width: 95%;
+  }
+
+  .spec-three {
+    margin-top: 0;
+    width: 100%;
+  }
+
+  .box-column {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .content-spec {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "role tools"
+    "deliverables deliverables";
+  }
+
+    /* Grid-area */
+    .spec-one {
+      grid-area: role;
+    }
+    .spec-two {
+      grid-area: tools;
+    }
+    .spec-three {
+      grid-area: deliverables;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .spec ul, .number-list li{
+        font-size: 2rem;
+    }
+
+    .content-spec {
+      display: grid;
+      grid-gap: 2rem;
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-areas:
+      "role deliverables tools";
+    }
+
+    .spec-one, .spec-two {
+      width: 23rem;
+      margin-top: 2.5rem;
+    }
+
+    .spec-three {
+      width: 53rem;
+      margin-top: 2.5rem;
+    }
+
+    .spec .title {
+      font-size: 2.2rem;
+    }
+  }
+
+/* ### Discovery & Strategy ### */
 
 /* User Research */
 
@@ -572,12 +1102,12 @@ h6 {
 
 .finding {
   border: solid 3px #D3DEDE;
-  border-radius: 19px;
+  border-radius: 2rem;
   height: 20rem;
   margin-bottom: 1.5rem;
   margin-right: 1.5rem;
   text-align: center;
-  width: 15rem;
+  width: 14.5rem;
 }
 
 .finding h2 {
@@ -594,7 +1124,6 @@ h6 {
 
 .project-dir-box {
   background-color: #D3DEDE;
-  padding: 2rem;
   padding: 2.5rem 2.5rem;
   margin-top: 2.5rem;
 }
@@ -606,6 +1135,42 @@ h6 {
 
 .project-dir-box ol {
   padding: 0 1.6rem;
+}
+
+@media screen and (min-width: 768px) {
+  .project-dir-box {
+    padding: 2.5rem 8rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+  .finding-grid {
+    justify-content: left;
+  }
+
+  .finding {
+    height: 25rem;
+    width: 25rem;
+  }
+
+  .finding h2 {
+    font-size: 4rem;
+  }
+
+  .finding p {
+    font-size: 2rem;
+    line-height: 1.5;
+    padding: 1.5rem 1.6rem;
+  }
+
+  .project-dir-box p {
+    text-align: left;
+  }
+
+  .project-dir-box {
+    padding: 1rem 15rem;
+  }
 }
 
 /* User Persona */
@@ -639,6 +1204,17 @@ h6 {
 .quote {
   letter-spacing: 0.25rem;
   line-height: 1.5;
+}
+
+
+@media screen and (min-width: 768px) {
+  .persona-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3rem;
+  }
+
+
 }
 
 /* Competitive Analysis */
@@ -675,10 +1251,6 @@ h6 {
 }
 
 /* ### Information Architecture ### */
-
-.info-arch {
-  margin: 0 2.5rem;
-}
 
 /* User Flow */
 
@@ -721,10 +1293,6 @@ h6 {
 
 /* ### Branding ### */
 
-.branding {
-  margin: 0 2.5rem;
-}
-
 .seamhub-brand {
   background-color: #183038;
   margin-top: 2.5rem;
@@ -742,10 +1310,9 @@ h6 {
 }
 
 #big-arrow {
-  width: 50%;
+  width: 30%;
   height: auto;
   margin: 1rem auto 0 auto;
-
 }
 
 .logo-var {
@@ -758,7 +1325,7 @@ h6 {
 #raleway-box, #opensans-box {
   border: solid 1px #D9D9D9;
   border-radius: 20px;
-  width: 16rem;
+  width: 15.5rem;
   display: inline-block;
   padding: 1rem 1rem;
   margin: 1rem 0 2.5rem 0;
@@ -856,10 +1423,6 @@ h6 {
 
 /* ### Interaction & Visual Design ### */
 
-.visual {
-  margin: 0 2.5rem;
-}
-
 /* Preference Test */
 
 .ab-test {
@@ -925,19 +1488,28 @@ h6 {
   padding-top: 2.2rem;
 }
 
+@media screen and (min-width: 768px) {
+  .screen {
+    margin: 2rem -8rem;
+  }
+
+  .change-user-test {
+    margin: 2rem -8rem;
+  }
+
+  .change-details {
+    padding-left: 4rem;
+  }
+
+}
+
 /* Final Product */
 
 .final-project-image img {
-  margin: 2rem 0;
+  margin: 4rem 0;
 }
-
-
 
 /* ### Summary ### */
-
-.summary {
-  margin: 0 2.5rem;
-}
 
 .sum-statement {
   background-color: #D3DEDE;
@@ -965,4 +1537,11 @@ h6 {
 
 #less-margin {
   margin-top: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .sum-statement {
+    padding: 2rem 8rem;
+  }
+
 }

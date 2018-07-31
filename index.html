@@ -9,37 +9,38 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   </head>
   <body>
-    <div class="container">
-
-      <!-- Menu Overlay -->
-      <div id="myNav" class="overlay">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <div class="overlay-content">
-          <a href="#project-section" onclick="closeNav()">Work</a>
-          <a href="#" onclick="closeNav()">Resume</a>
-          <a href="#" onclick="closeNav()">About</a>
-          <a href="mailto:sharonchoi.design@gmail.com" onclick="closeNav()">Contact</a>
-        </div>
-      </div>
-
-      <!-- javascript for menu icon -->
-      <script>
-        function openNav() {
-            document.getElementById("myNav").style.display = "block";
-        }
-        function closeNav() {
-            document.getElementById("myNav").style.display = "none";
-        }
-      </script>
-
-      <!-- Navbar Section-->
+    <div class="container homepage">
       <nav class="navbar">
+        <!-- Menu Overlay -->
+        <div id="myNav" class="overlay">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <div class="overlay-content">
+            <a href="#project-section" onclick="closeNav()">Work</a>
+            <a href="#" onclick="closeNav()">Resume</a>
+            <a href="#" onclick="closeNav()">About</a>
+            <a href="mailto:sharonchoi.design@gmail.com" onclick="closeNav()">Contact</a>
+          </div>
+        </div>
+
+        <!-- javascript for menu icon -->
+        <script>
+          function openNav() {
+              document.getElementById("myNav").style.display = "block";
+          }
+          function closeNav() {
+              document.getElementById("myNav").style.display = "none";
+          }
+        </script>
+
+        <!-- Navbar Section-->
         <ul class="topnav" id="myTopnav">
           <li class="logo"><a href="index.html"><img src="images/homepage/logo-sharon-black.svg" alt="Sharon-logo"></a></li>
-          <li class="nav"><a href="#project-section">Work</a></li>
-          <li class="nav"><a href="#">Resume</a></li>
-          <li class="nav"><a href="#">About</a></li>
-          <li class="nav"><a href="mailto:sharonchoi.design@gmail.com">Contact</a></li>
+          <div class ="nav">
+            <li class="nav-item"><a href="#project-section">Work</a></li>
+            <li class="nav-item"><a href="#">Resume</a></li>
+            <li class="nav-item"><a href="#">About</a></li>
+            <li class="nav-item button" id="contact-btn"><a href="mailto:sharonchoi.design@gmail.com">Contact</a></li>
+          </div>
           <li class="menu"><span style="font-size:3.6rem;cursor:pointer" onclick="openNav()"><i class="fas fa-bars"></i></span></li>
         </ul>
       </nav>
@@ -56,54 +57,71 @@
         <div class="project-cta">
           <a class="link" id="project-cta-text" href="#project-section">See featured project<object id="project-cta-icon" type="image/svg+xml" data="images/homepage/dot-arrow.svg"></object></a>
         </div>
-        <div id="project-section">
-          <img class="project-screen"src="images/homepage/seamhub-display.png" alt=display>
+        <div class="project-section">
+          <img class="project-screen full-width-img" src="images/homepage/seamhub-display.png" alt=display>
           <div class="project-display">
-            <div class="project-bkg-image"></div>
+            <div class="project-bkg-img full-width-img"></div>
             <div class="project-info">
               <h2>Seamhub</h2>
               <pre class="label">Responsive Web Design  |<span class="new-line">  UX & UI Design  |  Brand Identity</span></pre>
                 <div class="button" id="btn-case-study">
                   <a href="project.html">View case study</a>
                 </div>
-              <p class="body-text">Seamhub allows users to manage their digital assets in both a personal and professional setting seamlessly.</p>
+              <p class="label-text">Seamhub allows users to manage their digital assets in both a personal and professional setting seamlessly.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-section-desktop desktop-size full-width-img">
+
+          <img class="project-screen-wbkg" src="images/homepage/seamhub-display-wbkg.png" alt=display>
+
+          <div class="project-display">
+            <div class="project-info">
+              <h2>Seamhub</h2>
+              <pre class="label">Responsive Web Design  |<span class="new-line">  UX & UI Design  |  Brand Identity</span></pre>
+                <div class="button" id="btn-case-study">
+                  <a href="project.html">View case study</a>
+                </div>
+              <p class="label-text">Seamhub allows users to manage their digital assets in both a personal and professional setting seamlessly.</p>
             </div>
           </div>
         </div>
       </section>
 
       <!--Intro Section-->
-      <section class="intro">
-        <div class="intro-box">
-          <h3>As a designer with a background in the customer-facing industry, I embrace a people-oriented mindset and deeply aware of the importance of being empathetic. My goal is to offer engaging and friendly design to users.</h3>
-          <div class="intro-link">
-            <a class="link">Learn more about me <i class="fas fa-caret-right"></i></a>
-          </div>
+      <section class="intro full-width-img">
+        <div class="grey-box">
+            <div class="intro-text">
+              <h3>As a designer with a background in the customer-facing industry, I embrace a people-oriented mindset and deeply aware of the importance of being empathetic. My goal is to offer engaging and friendly design to users.</h3>
+              <a class="link" href="#">Learn more about me <i class="fas fa-caret-right"></i></a>
+            </div>
         </div>
       </section>
 
       <!--Process Section-->
       <section class="process">
-        <div class="process-ux">
-          <h3 class="title">UX Design Process</h3>
+        <div class="process-ux ux-text">
+          <h5>UX Design Process</h5>
           <p>I begin my design projects by defining and scoping the presented problem, get to know my users though interview and survey, then strategically map out solutions through series of user flows, wireframes and prototypes. I test the usability of my designs to ensure a delightful user experience.</p>
-          <img src="images/homepage/lofi-wireframe.png" alt="Hand-drawn wireframe">
         </div>
-        <div class="process-ui">
-          <h3 class="title">UI & Visual Design</h3>
+        <img class="ux-image" src="images/homepage/lofi-wireframe.png" alt="Hand-drawn wireframe">
+
+        <div class="process-ui ui-text">
+          <h5>UI & Visual Design</h5>
           <p>Simplicity and quality are my design focus. I create a brand identity that shapes the user interface of each of my products. Through finding the right color palette, typography and tone of voice, I turn any low-fidelity UX wireframes into beautiful and intuitive prototypes.</p>
-          <img src="images/homepage/hifi-wireframe.png" alt="Hi-Fi wireframe">
         </div>
+        <img class="ui-image" src="images/homepage/hifi-wireframe.png" alt="Hi-Fi wireframe">
       </section>
 
       <!--Footer Section-->
       <footer class="footer">
-        <div class="message-box">
+        <div class="message-box full-width-img">
           <h2>Thank you for dropping by!<br/>
               I hope you enjoyed your visit.
           </h2>
           <h3>Seeing something you like?<span class="new-line"> Let's connect and chat more!</span></h3>
-          <div class="call-to-action">
+          <div class="message-btn">
             <div class="button" id="contact">
               <a href="mailto:sharonchoi62@gmail.com">Get in touch</a>
             </div>
@@ -112,7 +130,7 @@
             </div>
           </div>
         </div>
-        <div class="footer-box">
+        <div class="footer-box full-width-img">
           <ul class="social-media">
             <li>
               <a href="https://www.linkedin.com/in/sharonchoisf/">
