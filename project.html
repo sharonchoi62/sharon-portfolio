@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/hover-min.css" media="all">
   </head>
   <body>
     <div class="container project">
@@ -16,9 +17,9 @@
       <div id="myNav" class="overlay">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <div class="overlay-content">
-          <a href="#project-section" onclick="closeNav()">Work</a>
-          <a href="#" onclick="closeNav()">Resume</a>
-          <a href="#" onclick="closeNav()">About</a>
+          <a href="index.html#project-section" onclick="closeNav()">Work</a>
+          <a href="https://drive.google.com/open?id=1TP7An6IBV-fRwJndlWIOmCeNpcoib5XT" onclick="closeNav()" target="_blank">Resume</a>
+          <a href="about.html" onclick="closeNav()">About</a>
           <a href="mailto:sharonchoi.design@gmail.com" onclick="closeNav()">Contact</a>
         </div>
       </div>
@@ -37,13 +38,13 @@
       <nav class="navbar">
         <ul class="topnav" id="myTopnav">
           <li class="logo"><a href="index.html"><img src="images/projects/seamhub/logo-sharon-white.svg" alt="Sharon-logo"></a></li>
-          <div class ="nav">
-            <li class="nav-item"><a id="white" href="#project-section">Work</a></li>
-            <li class="nav-item"><a id="white" href="#">Resume</a></li>
-            <li class="nav-item"><a id="white" href="#">About</a></li>
-            <li class="nav-item button" class="contact-btn" id="white-border"><a id="white" href="mailto:sharonchoi.design@gmail.com">Contact</a></li>
+          <div class ="nav" id="nav-white">
+            <li class="nav-item"><a href="index.html#project-section">Work</a></li>
+            <li class="nav-item"><a href="https://drive.google.com/open?id=1TP7An6IBV-fRwJndlWIOmCeNpcoib5XT" onclick="closeNav()" target="_blank">Resume</a></li>
+            <li class="nav-item"><a href="about.html">About</a></li>
+            <li class="nav-item"><a class="button" id="btn-contact-white" href="mailto:sharonchoi.design@gmail.com">Contact</a></li>
           </div>
-          <li class="menu"><span style="font-size:3.6rem;cursor:pointer;" onclick="openNav()"><i class="fas fa-bars" id="white"></i></span></li>
+          <li class="menu" id="white"><span style="font-size:3.6rem;cursor:pointer;" onclick="openNav()"><i class="fas fa-bars" style="color: white"></i></span></li>
         </ul>
       </nav>
 
@@ -57,16 +58,12 @@
           <div id="seamhub-display">
             <img src="images/homepage/seamhub-display.png" alt="Seamhub Project Display">
           </div>
-          <div id="project-label"
+          <div id="project-label">
             <pre class="label">Responsive Web Design  |<div class="new-line">  UX & UI Design  |  Brand Identity</div></pre>
           </div>
           <div class="call-to-action">
-            <div class="button btn-mobile">
-              <a href = "https://invis.io/BVH9NYAH3RC" target="_blank">View mobile prototype</a>
-            </div>
-            <div class="button btn-desktop">
-              <a href = "https://invis.io/CNMXPWFGH7Z" target="_blank">View desktop prototype</a>
-            </div>
+            <a class="button hvr-grow" id="btn-prototype-mobile" href="https://invis.io/BVH9NYAH3RC" target="_blank">View mobile prototype</a>
+            <a class="button hvr-grow" id="btn-prototype-desktop" href="https://invis.io/CNMXPWFGH7Z" target="_blank">View desktop prototype</a>
           </div>
         </section>
 
@@ -221,13 +218,15 @@
               <h6 class="persona-role">Active Social Sharer</h6>
               <pre class="persona-info">Kelly B.  |  25 years old<br>Student</pre>
               <p class="quote">“I enjoy using Pinterest to explore fashion trends and cooking inspiration. It allows me to organize my ideas.“</p>
-              <h6>Goals</h6>
-              <p>Kelly wants to save inspiration from the internet and take notes of her ideas on the go with her mobile. She also wants to be able to organize and share her thoughts with friends effectively.</p>
-              <h6>Frustrations</h6>
-              <ol class="number-list">
-                <li>Have to go through too many steps before saving or deleting content.</li>
-                <li>No preview function in existing cloud storage apps, feel distracted having to switch between the storage apps and other apps when opening files each time.</li>
-              </ol>
+              <div class="persona-text">
+                <h6>Goals</h6>
+                <p>Kelly wants to save inspiration from the internet and take notes of her ideas on the go with her mobile. She also wants to be able to organize and share her thoughts with friends effectively.</p>
+                <h6>Frustrations</h6>
+                <ol class="number-list">
+                  <li>Have to go through too many steps before saving or deleting content.</li>
+                  <li>No preview function in existing cloud storage apps, feel distracted having to switch between the storage apps and other apps when opening files each time.</li>
+                </ol>
+              </div>
             </div>
             <div class="persona item-two">
               <img src="images/projects/seamhub/persona-jenn.png" alt="Jenn-Remote-Worker">
@@ -247,7 +246,7 @@
 
           <!-- Competitive Analysis -->
           <div class="content">
-            <h5 class="title content-title">Competitive Analysis</h5>
+            <h5 class="title content-title">Competitive<span class="new-line-desktop"> Analysis</span></h5>
             <div class="content-text">
               <h2 class="sub-title">Learning from the existing solutions</h2>
               <div class="comp-logo">
@@ -256,7 +255,9 @@
                 <img id="icloud" src="images/projects/seamhub/logo-icloud.png" alt="iCloud">
               </div>
               <p>Given the cloud storage service market has been established for almost a decade, there are multitudinous brands entered the market, some leading platforms, like Google Drive, icloud, Dropbox, Evernote and Pinterest, are dominating and taking up the most market shares, along with smaller businesses, like SugarSync, Carbonite and Mozy, that are evolving. While these platforms possess unique value and shortfall, I focused my analysis on two cloud-storage-based applications, Dropbox and iCloud, as well as a content capture and organization oriented application, Pinterest, in order to penetrate a broader range of business setting.</br></br>Through SWOT analysis and a closer examination to the established user flows of these competitors, I was able to leverage the value-added features and growth opportunities into my design, while sidestepping those problems that composed user’s frustrations.</p>
-              <a class="link" href="https://docs.google.com/document/d/1BFPhlcQtxaIdAHmPk4AoTHd1ef7c2Ph66Lk8DQWQOAU/edit?usp=sharing" target="_blank">Checkout detailed SWOT analysis <i class="fas fa-caret-right"></i></a>
+              <div class="hover-link">
+                <a class="link hvr-icon-wobble-horizontal" href="https://docs.google.com/document/d/1BFPhlcQtxaIdAHmPk4AoTHd1ef7c2Ph66Lk8DQWQOAU/edit?usp=sharing" target="_blank">Checkout detailed SWOT analysis <i class="fas fa-caret-right hvr-icon"></i></a>
+              </div>
             </div>
         </section>
 
@@ -265,7 +266,6 @@
           <h3 class="heading">Information<div class="new-line"> Architecture</div></h3>
 
           <!-- User Flow -->
-
           <div class="userflow-bkg">
             <div class="userflow-img full-width-img"></div>
             <div class="userflow-text">
@@ -274,13 +274,15 @@
             </div>
           </div>
           <div class="content">
-            <h5 class="title content-title">User Stories & User Flows</h5>
+            <h5 class="title content-title">User Stories & <span class="new-line-desktop">User Flows</span></h5>
             <div class="content-text">
               <h2 class="sub-title">Putting myself in users’ shoes and visualizing the paths</h2>
               <p>From the perspective of each user types, new users and returning users, I compiled a list of tasks as goals that I wanted to accomplish with my product. I flagged the essential tasks as the minimum viable product (MVP) and prioritized them according to their level of necessity to the project.</br></br>
               I then focused on mapping out the most intuitive paths for the high prioritized tasks which include the processes of on-boarding, account upgrade, file upload, and organization, as well as content saving from the internet. I crafted a sitemap to manage the overall structure and content hierarchy of the site.</p>
-              <a class="link" href="https://docs.google.com/spreadsheets/d/1bu1VmZHzm7vZfpq2G6oFklGjiAvQTjDxT9K9Nw64at4/edit?usp=sharing" target="_blank">Check out user stories <i class="fas fa-caret-right"></i></a><br>
-              <a class="link" id="offset-margin" href="https://drive.google.com/file/d/1ONIlqzOfpugOCo5yb757eTa2UxmPcSCw/view?usp=sharing" target="_blank">Check out all user flows & site map <i class="fas fa-caret-right"></i></a>
+              <div class="hover-link">
+                <a class="link hvr-icon-wobble-horizontal" href="https://docs.google.com/spreadsheets/d/1bu1VmZHzm7vZfpq2G6oFklGjiAvQTjDxT9K9Nw64at4/edit?usp=sharing" target="_blank">Check out user stories <i class="fas fa-caret-right hvr-icon"></i></a><br>
+                <a class="link hvr-icon-wobble-horizontal" id="offset-margin" href="https://drive.google.com/file/d/1ONIlqzOfpugOCo5yb757eTa2UxmPcSCw/view?usp=sharing" target="_blank">Check out all user flows & site map <i class="fas fa-caret-right hvr-icon"></i></a>
+              </div>
             </div>
           </div>
 
@@ -289,25 +291,35 @@
             <img src="images/projects/seamhub/wireframe-image.jpg" alt="Wireframes">
           </div>
           <div class="content">
-            <h5 class="title content-title">Wireframes & <span class="new-line-desktop">Low-Fidelity Prototype</span></h5>
+            <h5 class="title content-title">Wireframes & <span class="new-line-desktop">Low-Fidelity</span><span class="new-line-desktop"> Prototype</span></h5>
             <div class="content-text">
               <h2 class="sub-title">Sketching out frameworks and get ready for user testing</h2>
               <p>Having set out the foundation,  I moved onto laying out the skeletal framework, targeted the MVP by revisiting my user stories, user flows, and sitemap. I utilized papers and pencil to sketch out different variations of the landing page, dashboard, and several task-oriented pages. The goal was to rapidly iterate my ideas before pinning down to a single direction.</br></br>
               Once I settled in the direction, I brought my rough drafts to Balsamiq, where I developed my low-fidelity prototypes, and subsequently to Sketch and InVision, where I created a clickable prototype for user testing.</p>
-              <div class="lo-fi-img">
-                <img src="images/projects/seamhub/lo-fi-prototypes-mobile.png" alt="Low-Fidelity Prototype">
+            </div>
+          </div>
+          <div class="lo-fi-bkg full-width-img">
+            <div class="lo-fi-img mobile-size full-width-img">
+              <img src="images/projects/seamhub/lo-fi-prototypes-mobile.png" alt="Low-Fidelity Prototype">
+            </div>
+            <div class="lo-fi-img-desktop desktop-size full-width-img">
+              <img src="images/projects/seamhub/lo-fi-prototypes.png" alt="Low-Fidelity Prototype">
+            </div>
+            <div class="content">
+              <div class="content-text lo-fi-link hover-link">
+                <a class="link hvr-icon-wobble-horizontal" href="https://drive.google.com/drive/folders/1eH3X95lz38JD2KgxsQhIy73NwRpEW1yz?usp=sharing" target="_blank">View all low-fidelity prototype <i class="fas fa-caret-right hvr-icon"></i></a>
               </div>
-              <a class="link" href="https://drive.google.com/drive/folders/1eH3X95lz38JD2KgxsQhIy73NwRpEW1yz?usp=sharing" target="_blank">View all low-fidelity prototype <i class="fas fa-caret-right"></i></a>
             </div>
           </div>
 
+
           <!-- User Testing 1st round -->
-          <div class="content">
+          <div class="content user-test">
             <h5 class="title content-title">User Testing<span class="new-line-desktop">1st Round</span></h5>
             <div class="content-text">
               <h2 class="sub-title">Identifying and fixing confusion</h2>
-              <p id="add-margin">With the wireframes underway, I was ready for my first user testing aiming to find out whether the developed layouts and flows are easy to follow. Based on the users’ feedback, I identified a list of items that could be improved to enhance the overall user experience.</p>
-              <a class="link" href="https://docs.google.com/document/d/1tAuF5FZzhtJMaOPDS_q3suMT08BX-81eI3M4HACdo-g/edit?usp=sharing" target="_blank">Check out video of the user tests and a detailed summary <i class="fas fa-caret-right"></i></a>
+              <p>With the wireframes underway, I was ready for my first user testing aiming to find out whether the developed layouts and flows are easy to follow. Based on the users’ feedback, I identified a list of items that could be improved to enhance the overall user experience.</p>
+              <span class="hover-link"><a class="link hvr-icon-wobble-horizontal" href="https://docs.google.com/document/d/1tAuF5FZzhtJMaOPDS_q3suMT08BX-81eI3M4HACdo-g/edit?usp=sharing" target="_blank">Check out video of the user tests and a detailed summary <i class="fas fa-caret-right hvr-icon"></i></a></span>
             </div>
           </div>
         </section>
@@ -315,33 +327,40 @@
         <!-- ### Branding ### -->
         <section id="branding">
           <h3 class="heading">Branding</h3>
-          <img src="images/projects/seamhub/moodboard.png" alt="moodboard">
-          <div class="seamhub-brand full-width-img">
+          <img src="images/projects/seamhub/moodboard.png" alt="moodboard" class="moodboard">
+          <div class="seamhub-def full-width-img">
             <h3>Seamhub is defined as a seamless and cohesive solution that empower people to collect, organize, create and share ideas.</h3>
           </div>
           <!-- Brand Identity & Logo -->
           <div class="content">
-            <h5 class="title content-title">Brand <span class="new-line-desktop">Identity &</span><span class="new-line-desktop">Logo</span></h5>
+            <h5 class="title content-title">Brand <span class="new-line-desktop">Identity &</span><span class="new-line-desktop"> Logo</span></h5>
             <div class="content-text">
               <h2 class="sub-title">Mind-mapping and word association</h2>
               <p>Stability and security play a big part in the world of cloud storage and organization service, therefore, when it comes to branding, the first thing crossed my mind were trustworthiness and professionalism. Meanwhile, as more and more users are bringing these applications to their personal and social lives, I decided the brand should also be lifestyle-friendly and energetic. These concepts shaped the tone and voice of my brand.</br></br>
               I went on mind-mapping and playing around different word combinations based on the concepts of easy, secure, unified and modern. While I came across with different compositions, I decided to lock down Seamhub as the brand name.</p>
-              <a class="link" href="https://docs.google.com/document/d/1BwIDf-vk57X_n3HqeUNxGUUMuGlKk14tun3J89IFVok/edit?usp=sharing" target="_blank">Take a look at my mind map <i class="fas fa-caret-right"></i></a>
+
+              <span class="hover-link"><a class="link hvr-icon-wobble-horizontal" href="https://docs.google.com/document/d/1BwIDf-vk57X_n3HqeUNxGUUMuGlKk14tun3J89IFVok/edit?usp=sharing" target="_blank">Take a look at my mind map <i class="hvr-icon fas fa-caret-right"></i></a></span>
               <p class>With the brand identity getting in shape, I began to sketch out different variations of objects that I found relevant to the brand. The concepts of a puzzle, gear wheel, lightbulb, rooftop, and pocket have initially reached my mind. I was eventually attracted by the simplicity of logotypes and tried out twisting the brand initials (S & H), to meet the goal of creating a clean, modern and memorable logo.</p>
             </div>
           </div>
-          <div class="logo-sketch-desktop">
+          <div class="logo-sketch-mobile mobile-size">
+            <img src="images/projects/seamhub/sketch-logo-mobile.png" alt="Logo Sketches">
+          </div>
+          <div class="logo-sketch-desktop desktop-size">
             <img src="images/projects/seamhub/sketch-logo-1.png" alt="Logo Sketches">
             <img src="images/projects/seamhub/sketch-logo-2.png" alt="Logo Sketches">
-          </div>
-          <div class="logo-sketch-mobile">
-            <img src="images/projects/seamhub/sketch-logo-mobile.png" alt="Logo Sketches">
           </div>
           <div id="big-arrow">
             <img src="images/projects/seamhub/arrow-green.svg" alt="Arrow">
           </div>
-          <div class="logo-var">
+          <div class="logo-var mobile-size">
             <img src="images/projects/seamhub/logo-var-mobile.png" alt="Logo Variation">
+          </div>
+          <div class="logo-var-desktop desktop-size">
+            <img src="images/projects/seamhub/logo-var-green.png" alt="Logo Variation">
+            <img src="images/projects/seamhub/logo-var-blue.png" alt="Logo Variation">
+            <img src="images/projects/seamhub/logo-var-dark.png" alt="Logo Variation">
+            <img src="images/projects/seamhub/logo-var-light.png" alt="Logo Variation">
           </div>
 
           <!-- Typograhy -->
@@ -371,59 +390,62 @@
             <div class="content-text">
               <h2 class="sub-title">Perfect palette:<br>Professionalism, stability, and simplicity</h2>
               <p>I have chosen Oxford Blue, a deep navy tone that is sleek and modern, and Persian Green that helps enhance the harmoniousness and friendliness of the brand. I added orange and yellow, as well as a brighter blue and green, as the accent colors to enhance liveliness and energy sensation.</p>
-              <div class="brand">
-                <h6 class="sub-title">Brand Colors</h6>
-                <ul class="color-sample">
-                  <li>
-                    <div class="color-shape oxford"></div>
-                    <p class="color-text">Oxford Blue<br>#183038</p>
-                  </li>
-                  <li>
-                    <div class="color-shape persian"></div>
-                    <p class="color-text">Persian Green<br>#00A699</p>
-                  </li>
-                  <li>
-                    <div class="color-shape white"></div>
-                    <p class="color-text">White<br>#FFFFFF</p>
-                  </li>
-                </ul>
+              <div class="color-palette">
+                <div class="brand">
+                  <h6 class="sub-title">Brand Colors</h6>
+                  <ul class="color-sample">
+                    <li>
+                      <div class="color-shape oxford"></div>
+                      <p class="color-text">Oxford Blue<br>#183038</p>
+                    </li>
+                    <li>
+                      <div class="color-shape persian"></div>
+                      <p class="color-text">Persian Green<br>#00A699</p>
+                    </li>
+                    <li>
+                      <div class="color-shape white"></div>
+                      <p class="color-text">White<br>#FFFFFF</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="accent">
+                  <h6 class="sub-title">Accent Colors</h6>
+                  <ul class="color-sample">
+                    <li>
+                      <div class="color-shape blue"></div>
+                      <p class="color-text">Blue<br>#4484CE</p>
+                    </li>
+                    <li>
+                      <div class="color-shape green"></div>
+                      <p class="color-text">Green<br>#75CEC7</p>
+                    </li>
+                    <li>
+                      <div class="color-shape orange"></div>
+                      <p class="color-text">Orange<br>#F19F4D</p>
+                    </li>
+                    <li>
+                      <div class="color-shape yellow"></div>
+                      <p class="color-text">Yellow<br>#F9CF00</p>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div class="accent">
-                <h6 class="sub-title">Accent Colors</h6>
-                <ul class="color-sample">
-                  <li>
-                    <div class="color-shape blue"></div>
-                    <p class="color-text">Blue<br>#4484CE</p>
-                  </li>
-                  <li>
-                    <div class="color-shape green"></div>
-                    <p class="color-text">Green<br>#75CEC7</p>
-                  </li>
-                  <li>
-                    <div class="color-shape orange"></div>
-                    <p class="color-text">Orange<br>#F19F4D</p>
-                  </li>
-                  <li>
-                    <div class="color-shape yellow"></div>
-                    <p class="color-text">Yellow<br>#F9CF00</p>
-                  </li>
-                </ul>
+              <div class="hover-link">
+                <a class="link hvr-icon-wobble-horizontal" href="https://drive.google.com/file/d/1zufkGohY5_faxCy8CFOlTcH4-RSyP4rH/view?usp=sharing" target="_blank">Check out full style guide of Seamhub <i class="fas fa-caret-right hvr-icon"></i></a>
               </div>
-            <div>
-              <a class="link" href="https://drive.google.com/file/d/1zufkGohY5_faxCy8CFOlTcH4-RSyP4rH/view?usp=sharing" target="_blank">Check out full style guide of Seamhub <i class="fas fa-caret-right"></i></a>
-            </div>
             </div>
           </div>
         </section>
 
         <!-- ### Interaction & Visual Design ### -->
         <section id="visual">
-          <h3 class="heading">Interaction & </br>Visual Design</h3>
-          <img class="visual-display" src="images/projects/seamhub/hi-fi-display-mobile.png" alt="High-fidelity prototype">
+          <h3 class="heading">Interaction & <span class="new-line">Visual Design</span></h3>
+          <img class="visual-display mobile-size" src="images/projects/seamhub/hi-fi-display-mobile.png" alt="High-fidelity prototype">
+          <img class="visual-display desktop-size" src="images/projects/seamhub/hi-fi-display.png" alt="High-fidelity prototype">
 
           <!-- Hi-fi Mockup -->
           <div class="content">
-            <h5 class="title content-title">High-Fidelity Mockup</h5>
+            <h5 class="title content-title">High-Fidelity<span class="new-line-desktop"> Mockup</span></h5>
             <div class="content-text">
               <h2 class="sub-title">Implementing the brand identity</h2>
               <p>I transformed my prototype into a high-fidelity prototype by adding visual elements aligned with the branding framework that I set out. I also developed a responsive mockup design for mobile devices to ensure accessibility between different screen sizes.</p>
@@ -432,69 +454,73 @@
 
           <!-- Preference Testing -->
           <div class="content">
-            <h5 class="title content-title">Preference<span class="new-line-desktop">Testing</span></h5>
+            <h5 class="title content-title">Preference<span class="new-line-desktop"> Testing</span></h5>
             <div class="content-text">
               <h2 class="sub-title">Engaging the potential users to find out their preference and taste</h2>
               <p>I utilized preference test on Usability Hub to experiment user’s preferences on three areas: hero images, call-to-action button layout, and icon colors. Here is one of the highlight:</p>
             </div>
           </div>
             <!-- Screen A -->
+            <h5 class="ab-test-title">Call-To-Action Button Layout</h5>
             <div class="ab-test">
-              <h5 class="ab-test-title">Call-To-Action Button Layout</h5>
               <div class="screen">
-                <h6>Screen A<br>Expanded layout</h6>
+                <h5>Screen A<br>Expanded layout</h5>
                 <img src="images/projects/seamhub/preference-test-screen-a.png" alt="Screen A">
                 <h1>47%<div><h6 class="small-text">of users liked this design mainly because:</h6></div></h1>
                 <p>“All options are available in once” <br>“Less clicking time”</p>
               </div>
               <!-- Screen B -->
               <div class="screen">
-                <h6>Screen B<br>Minimized layout</h6>
+                <h5>Screen B<br>Minimized layout</h5>
                 <img src="images/projects/seamhub/preference-test-screen-b.png" alt="Screen B">
                 <h1>53%<div><h6 class="small-text">of users liked this design mainly because:</h6></div></h1>
                 <p>“Space used effectively” <br>“Larger preview box”</p>
               </div>
             </div>
-            <p class="content-text">Taking into consideration the percentage difference between these two designs was not statistically significant, I decided to consolidate the positive comments from each design and create a new variation for further testing.</p>
-            <div class="change-pref-test desktop-size">
-              <h6>Changes Implemented based on users’ feedback at preference test</h6>
+            <p id="center-text">Taking into consideration the percentage difference between these two designs was not statistically significant, I decided to consolidate the positive comments from each design and create a new variation for further testing.</p>
+            <div class="screen-change desktop-size ">
+              <h5>Changes Implemented based on users’ feedback at preference test</h5>
               <img src="images/projects/seamhub/preference-test-screen-change.png" alt="Change after preference test">
-              <div>
-                <p><img src="images/projects/seamhub/no-1.svg" alt="No.1" height="33" width="33">Keep the minimized layout with drop-down menu</p>
+              <div class="change-details">
+                <img class="number-icon" src="images/projects/seamhub/no-1.svg" alt="No.1">
+                <p>Keep the minimized layout with drop-down menu</p>
               </div>
-              <div>
-                <p><img src="images/projects/seamhub/no-2.svg" alt="No.2" height="33" width="33">Added a button panel so that user can add their frequently used acton buttons here for quick access</p>
+              <div class="change-details">
+                <img class="number-icon" src="images/projects/seamhub/no-2.svg" alt="No.2">
+                <p>Added a button panel so that user can add their frequently used acton buttons here for quick access</p>
               </div>
             </div>
-            <a class="link" href="https://drive.google.com/file/d/1cOmC1FUHyv2rprGZxpkYzl5uOpED3NWf/view?usp=sharing" target="_blank">See new layout variation <i class="fas fa-caret-right"></i></a>
-            <a class="link" href="https://docs.google.com/document/d/1hitJG0f4XFRbkOxOtJXHpRWOY1xhHjL6C5VWspZxBGM/edit?usp=sharing" target="_blank">See other preference test analysis <i class="fas fa-caret-right"></i></a>
+            <div class="content">
+              <div class="content-text mobile-size hover-link">
+                <a class="link hvr-icon-wobble-horizontal" href="https://drive.google.com/file/d/1cOmC1FUHyv2rprGZxpkYzl5uOpED3NWf/view?usp=sharing" target="_blank">See new layout variation <i class="fas fa-caret-right hvr-icon"></i></a>
+              </div>
+              <div class="content-text hover-link">
+                <a class="link hvr-icon-wobble-horizontal" href="https://docs.google.com/document/d/1hitJG0f4XFRbkOxOtJXHpRWOY1xhHjL6C5VWspZxBGM/edit?usp=sharing" target="_blank">See other preference test analysis <i class="fas fa-caret-right hvr-icon"></i></a>
+              </div>
+            </div>
 
 
             <!-- User Testing 2nd Round -->
             <div class="content">
-              <h6 class="title content-title">User Testing 2nd Round</h6>
+              <h5 class="title content-title">User Testing<span class="new-line-desktop"> 2nd Round</span></h5>
                 <div class="title-text">
                   <h2 class="sub-title">Gaining additional insight from users</h2>
-                  <p>I conducted another round of testing with three users via zoom conferencing. I explicitly reached out to individuals who have not participated in any of my earlier tests to get fresh pairs of eyes on my designs. </br></br>
+                  <p class="last-p">I conducted another round of testing with three users via zoom conferencing. I explicitly reached out to individuals who have not participated in any of my earlier tests to get fresh pairs of eyes on my designs. </br></br>
                   Delightly, all users had a positive impression on the visual design and layout of the site. They described the experience as seamless, intuitive, and easy to follow. During the tests, users were asked to perform a series of tasks based on the MVPs. On-boarding processes appeared to be a no-brainer, from which all of the users were able to complete basic action-oriented tasks, like uploading items and creating folders, effortlessly.</br></br>
                   However, the added quick button panel did not work out as expected. While I intended to allow users more immediate access to the frequently used action buttons, I carefully examined user's interaction with the site and realized that the design was not as constructive as I thought. Without an explicit instruction of how the button works, users were confused. </br></br>
                   Another shortcoming that drew my attention was how users anticipate saving a web link. I focused on finding out the solution for the problems and composed list of action items for fine-tuning my final product.</p>
                 </div>
               </div>
-              <div class="change-user-test">
-                <h6>Changes Implemented after 2nd round of user testing</h6>
-                <div class="desktop-size">
-                  <img src="images/projects/seamhub/usertest-change-desktop.png" alt="Change after user test">
-                </div>
-                <div class="mobile-size">
-                  <img src="images/projects/seamhub/usertest-change-mobile.png" alt="Change after user test">
-                </div>
+              <div class="screen-change">
+                <h5>Changes Implemented after 2nd round of user testing</h5>
+                <img class="desktop-size" src="images/projects/seamhub/usertest-change-desktop.png" alt="Change after user test">
+                <img class="mobile-size" src="images/projects/seamhub/usertest-change-mobile.png" alt="Change after user test">
                 <div class="change-details">
                   <img class="number-icon" src="images/projects/seamhub/no-1.svg" alt="No.1">
                   <p>Instead of placing the save link and screen capture button under a drop down, I decided to create individual buttons for direct access</p>
                 </div>
                 <div class="change-details">
-                  <img class="number-icon" src="images/projects/seamhub/no-2.svg" alt="No.2" height="33" width="33">
+                  <img class="number-icon" src="images/projects/seamhub/no-2.svg" alt="No.2">
                   <p>Enlarged preview panel</p>
                 </div>
               </div>
@@ -508,7 +534,7 @@
                 <p>Altogether, I designed 80+ screens and created a clickable prototype, both desktop and mobile, on Invision.</p>
               </div>
             </div>
-            <div class="final-project-image">
+            <div class="final-project-img">
               <img src="images/projects/seamhub/final-screen-1.png" alt="Homepage">
               <img class="desktop-size" src="images/projects/seamhub/final-screen-2.png" alt="Pricing">
               <img class="desktop-size" src="images/projects/seamhub/final-screen-3.png" alt="Feature">
@@ -517,12 +543,8 @@
               <img class="desktop-size" src="images/projects/seamhub/final-screen-6.png" alt="Create-note">
             </div>
             <div class="call-to-action">
-              <div class="button btn-mobile">
-                <a href = "https://invis.io/BVH9NYAH3RC" target="_blank">View mobile prototype</a>
-              </div>
-              <div class="button btn-desktop">
-                <a href = "https://invis.io/CNMXPWFGH7Z" target="_blank">View desktop prototype</a>
-              </div>
+              <a class="button hvr-grow" id="btn-prototype-mobile" href="https://invis.io/BVH9NYAH3RC" target="_blank">View mobile prototype</a>
+              <a class="button hvr-grow" id="btn-prototype-desktop" href="https://invis.io/CNMXPWFGH7Z" target="_blank">View desktop prototype</a>
             </div>
         </section>
 
@@ -530,44 +552,35 @@
         <section id="summary">
             <h3 class="heading">Summary</h3>
             <div class="sum-statement full-width-img">
-              <h6>For the fact that this was the very first time I take charge of a UX Design project, the learning curve has been steep, yet incredible. From start to finish, I took total control of the discovery, strategy, information architecture, branding, visual design, and the examination process.</h6>
+              <h5>For the fact that this was the very first time I take charge of a UX Design project, the learning curve has been steep, yet incredible. From start to finish, I took total control of the discovery, strategy, information architecture, branding, visual design, and the examination process.</h5>
             </div>
             <div>
             <div class="content">
-              <h5 class="title content-title">What I have learned</h5>
+              <h5 class="title content-title">What I have<span class="new-line-desktop"> learned</span></h5>
               <div class="title-text">
                 <h2 class="sub-title">User research is crucial</h2>
                 <p class="add-margin">I was amazed by how user research has impacted the direction of the project. With the project starting off with lots of unanswered questions, it got into shape as I moved along the process of surveying users, understanding the competitors, identifying MVPs, creating brand identity, wireframing, prototyping, and more importantly user testings. The project would have gone for an entirely different route if I didn’t engage with the users.</p>
-              </div>
-              </div>
-              <div class="content">
-              <div class="title-text">
                 <h2 class="sub-title">What I like ≠ What users like</h2>
                 <p>There were so many instances from which my anticipations were not the same as my users, not to mention that the solution I crafted may not be the best fit to user’s needs. This principle becomes more perceptible to me as I tested out my design with users.</p>
               </div>
             </div>
             <div class="content">
-              <h5 class="title" id="less-margin">What I could do better</h5>
-
-                <div class='title-text'>
-                    <h2 class="sub-title">Test early test often</h2>
-              <p id="last-p">If I had more time and resources, I would have conducted more extensive testings during the phase of wireframing to fix all the structural and layout problems at an earlier stage.  Not only I would have a stronger foundation for my design decision, but also I could focus more on the visual and interactive aspects during my later tests.  </br></br>While I have accomplished the MVPs of this project, if I continued to build out the identified collaboration features, as well as any discovery identified along the way, there would be tremendous opportunities for this project to shine.</p>
+              <h5 class="title content-title">What I could <span class="new-line-desktop"> do better</span></h5>
+              <div class='title-text'>
+                <h2 class="sub-title">Test early test often</h2>
+                <p class="last-p">If I had more time and resources, I would have conducted more extensive testings during the phase of wireframing to fix all the structural and layout problems at an earlier stage.  Not only I would have a stronger foundation for my design decision, but also I could focus more on the visual and interactive aspects during my later tests.  </br></br>While I have accomplished the MVPs of this project, if I continued to build out the identified collaboration features, as well as any discovery identified along the way, there would be tremendous opportunities for this project to shine.</p>
+              </div>
             </div>
-          </div>
           </section>
 
         <!--Footer Section-->
         <footer class="footer">
           <div class="message-box full-width-img" id="text-padding">
             <h2 class>Let's work together!</h2>
-            <h3>Got a project in mind? Feel free to contact me. I am excited to collaborate with you and create something even better.</h3>
-            <div class="message.btn">
-              <div class="button" id="contact">
-                <a href="mailto:sharonchoi62@gmail.com">Get in touch</a>
-              </div>
-              <div class="button" id="resume">
-                <a href="https://drive.google.com/open?id=1TP7An6IBV-fRwJndlWIOmCeNpcoib5XT" target="_blank">Download resume</a>
-              </div>
+            <h3>Got a project in mind? Feel free to contact me. <span class="new-line-desktop">I am excited to collaborate with you and create something even better.</span></h3>
+            <div class="message-btn">
+              <a class="button hvr-round-corners" id="btn-in-touch" href="mailto:sharonchoi62@gmail.com">Get in touch</a>
+              <a class="button hvr-round-corners" id="btn-resume" href="https://drive.google.com/open?id=1TP7An6IBV-fRwJndlWIOmCeNpcoib5XT" target="_blank">Download resume</a>
             </div>
           </div>
           <div class="footer-box full-width-img">
