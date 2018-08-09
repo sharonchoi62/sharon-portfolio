@@ -288,6 +288,7 @@ h6 {
 
   .heading {
     letter-spacing: 1rem;
+    margin: 6rem;
   }
 
   .sub-title {
@@ -664,7 +665,7 @@ h6 {
 
 .hero > h2 {
   letter-spacing: -1px;
-  margin-top: 2.5rem;
+  margin-top: 2rem;
 }
 
 .hero > h3 {
@@ -723,6 +724,10 @@ h6 {
 
 #pointer-text {
   font-size: 1.8rem;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 650;
+  letter-spacing: 0.4rem;
+
 }
 
 #pointer-icon {
@@ -763,8 +768,9 @@ h6 {
 .project-info {
   position: relative;
   color: white;
-  top:10rem;
+  top: 9rem;
   height: 43rem;
+  margin: 0 auto
 }
 
 .project-info > h2 {
@@ -773,10 +779,11 @@ h6 {
   letter-spacing: 2.6px;
 }
 
+
 /* Case Study Button */
 
 #btn-case-study {
-  margin: 4rem 0 5rem 0;
+  margin: 2rem 0 3rem 0;
   border: 1.5px solid #FFF;
   color: #FFF;
   padding: 1.2rem 1.8rem;
@@ -789,6 +796,9 @@ h6 {
   color: #183038;
 }
 
+#project-info > a {
+  display: inline-block;
+}
 
 @media screen and (min-width: 1024px) {
 
@@ -821,10 +831,6 @@ h6 {
     font-size: 4.2rem;
     letter-spacing: 6px;
   }
-
-  #btn-case-study {
-    flex-basis: content;
-    }
 
   /* Hover Overlap */
 
@@ -1102,6 +1108,7 @@ h6 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 5rem;
 }
 
 .call-to-action a {
@@ -1168,13 +1175,13 @@ h6 {
 @media screen and (min-width: 1024px) {
   #section-nav {
     align-items: center;
-    background-color: rgba(234, 231, 233, 0.43);
+    background-color: #F6F5F6;
     display: flex;
     justify-content: space-between;
-    margin: 7rem 0;
+    margin-bottom: 5rem;
     overflow: hidden;
-    padding: 2rem 20rem;
     text-align: center;
+    padding: 2rem 20rem;
   }
 
   #section-nav a {
@@ -1185,16 +1192,24 @@ h6 {
     letter-spacing: -1%;
   }
 
+  #section-nav a:hover {
+    color: #BC519E;
+  }
+
   .sticky {
     position: fixed;
-    top: 0;
+    top: -1rem;
     width: 100%;
+    z-index: 100;
   }
 
   .sticky + .case-study-content {
-    padding-top: 6rem;
+    margin-top: 8rem;
   }
 
+  /* .placeholder {
+    height: 5rem;
+  } */
 }
 
 /* ### Overview ### */
