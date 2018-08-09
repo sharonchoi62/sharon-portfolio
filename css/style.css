@@ -498,25 +498,22 @@ h6 {
   }
 
   #btn-contact {
-    border: 2px solid #BC519E;
-    color: #BC519E;
+    background-color: #BC519E;
+    color: #FFF;
     font-family: 'Nunito', sans-serif;
     padding: 1rem 1.8rem;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
-  }
-
-  #btn-contact:hover {
-    background-color: #BC519E;
-    color: white;
   }
 
   #btn-contact-white {
     border: 2px solid #FFF;
+    background-color: #FFF;
     font-family: 'Nunito', sans-serif;
     padding: 1rem 1.8rem;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
+    color: #00A699;
   }
 
   #btn-contact-white:hover {
@@ -585,7 +582,7 @@ h6 {
 
 .footer-box p {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 340;
+  font-weight: 400;
   padding: 1rem 2.5rem;
 }
 
@@ -683,6 +680,7 @@ h6 {
 #name {
   display: block;
 }
+
 
 @media screen and (min-width: 768px) {
   .hero {
@@ -849,7 +847,7 @@ h6 {
     height: auto;
     width: 100%;
     opacity: 0;
-    transition: .5s ease;
+    transition: none 0.15s ease-in-out;
     background-color: rgba(24, 48, 56, 0.9);
     display: flex;
     flex-direction: column;
@@ -956,11 +954,6 @@ h6 {
   }
 }
 
-@media screen and (min-width: 1024px) {
-
-}
-
-
 /*
 ###### ABOUT PAGE STYLING ######
 */
@@ -989,8 +982,8 @@ h6 {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 35rem;
+  max-height: 35rem;
   position: relative;
-  top: 0;
 }
 
 .bio-quote {
@@ -1173,23 +1166,35 @@ h6 {
 /* ### Section Menu ### */
 
 @media screen and (min-width: 1024px) {
-  .section-nav {
+  #section-nav {
     align-items: center;
     background-color: rgba(234, 231, 233, 0.43);
     display: flex;
     justify-content: space-between;
     margin: 7rem 0;
+    overflow: hidden;
     padding: 2rem 20rem;
     text-align: center;
   }
 
-  .section-nav a {
+  #section-nav a {
     color: #6F676D;
     font-family: 'Montserrat', sans-serif;
     font-size: 2rem;
-    font-weight: 400;
+    font-weight: 450;
     letter-spacing: -1%;
   }
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  .sticky + .case-study-content {
+    padding-top: 6rem;
+  }
+
 }
 
 /* ### Overview ### */
@@ -1348,7 +1353,6 @@ h6 {
 .project-dir-box {
   background-color: #D3DEDE;
   padding: 2.5rem 2.5rem;
-  margin-top: 2.5rem;
 }
 
 .project-dir-box p {
@@ -1363,17 +1367,17 @@ h6 {
 @media screen and (min-width: 768px) {
   .project-dir-box {
     padding: 2.5rem 8rem;
+    margin-top: 3rem;
   }
 }
 
 @media screen and (min-width: 1024px) {
-
   .project-dir-box p {
     text-align: left;
   }
 
   .project-dir-box {
-    padding: 1rem 15rem;
+    padding: 1rem 20rem;
   }
 }
 
@@ -1388,6 +1392,36 @@ h6 {
   font-size: 2.0rem;
   font-weight: 600;
   margin: 3rem 0 2rem 0;
+}
+
+blockquote {
+  font-family: 'lato', sans-serif;
+  font-weight: 550;
+  font-size: 1.6rem;
+  color: #4F3F4A;
+  display: block;
+  border-width: 2px 0;
+  border-style: solid;
+  border-color: #D3DEDE;
+  line-height: 1.6;
+  padding: 1.5rem 0 1.5rem;
+  margin: 4rem auto;
+  position: relative;
+  max-width: 100%;
+}
+
+blockquote:before {
+  content: '\201C';
+  position: absolute;
+  top: -1rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 3rem;
+  height: 2rem;
+  font: 6em/1.08em 'PT Sans', sans-serif;
+  color: #D3DEDE;
+  text-align: center;
 }
 
 .persona-role {
@@ -1405,17 +1439,16 @@ h6 {
   line-height: 1.4;
 }
 
-.quote {
-  letter-spacing: 0.25rem;
-  line-height: 1.5;
-}
-
-
 @media screen and (min-width: 768px) {
   .persona-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 3rem;
+  }
+
+  blockquote {
+    padding: 2rem 0 1.5rem 0;
+    max-width: 95%;
   }
 }
 
@@ -1424,11 +1457,14 @@ h6 {
     grid-gap: 4rem;
   }
 
-  .quote {
-    letter-spacing: 0.25rem;
-    line-height: 1.7;
-    width: 90%;
-    margin: 4rem auto;
+  blockquote {
+    font-size: 2rem;
+  }
+
+  blockquote:before {
+    top: -1rem;
+    width: 5rem;
+    height: 3rem;
   }
 
   .persona h6 {
