@@ -11,9 +11,9 @@ html {
 }
 
 .container {
-  width: 100%;
   color: #3B3B3B;
   padding: 0 2.5rem;
+  width: 100%;
 }
 
 .full-width-img {
@@ -151,8 +151,8 @@ ul {
 
 p {
   font-family: 'Lato', sans-serif;
-  line-height: 1.6;
   font-size: 1.6rem;
+  line-height: 1.6;
   margin: 0;
 }
 
@@ -288,7 +288,7 @@ h6 {
 
   .heading {
     letter-spacing: 1rem;
-    margin: 6rem;
+    margin: 4rem;
   }
 
   .sub-title {
@@ -333,18 +333,18 @@ h6 {
 
 .link {
   color: #BC519E;
+  display: block;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.6rem;
   font-weight: 450;
-  display: block;
   margin: 2rem 0;
 }
 
 .link i {
+  font-size: 2.5rem;
+  left: 0.3rem;
   position: relative;
   top: 0.4rem;
-  left: 0.3rem;
-  font-size: 2.5rem;
 }
 
 #offset-margin {
@@ -387,9 +387,9 @@ h6 {
 
 .overlay-content {
     position: relative;
+    text-align: center;
     top: 20%;
     width: 100%;
-    text-align: center;
 }
 
 .overlay a {
@@ -408,10 +408,10 @@ h6 {
 }
 
 .overlay .closebtn {
+    font-size: 5rem;
     position: absolute;
     top: 2rem;
     right: 2rem;
-    font-size: 5rem;
 }
 
 @media screen and (max-height: 450px) {
@@ -434,15 +434,15 @@ h6 {
 }
 
 .topnav > .logo {
+  align-self: center;
+  justify-self: start;
   max-width: 7rem;
   min-width: 7rem;
-  justify-self: start;
-  align-self: center;
 }
 
 .topnav > .nav {
-  justify-self: end;
   align-self: center;
+  justify-self: end;
 }
 
 .nav a {
@@ -483,11 +483,11 @@ h6 {
   }
 
   .nav {
+    align-items: baseline;
     display: flex;
     font-size: 1.8rem;
     justify-content: flex-end;
     text-align: center;
-    align-items: baseline;
   }
 
   .nav-item {
@@ -508,13 +508,13 @@ h6 {
   }
 
   #btn-contact-white {
-    border: 2px solid #FFF;
     background-color: #FFF;
+    border: 2px solid #FFF;
+    color: #00A699;
     font-family: 'Nunito', sans-serif;
     padding: 1rem 1.8rem;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
-    color: #00A699;
   }
 
   #btn-contact-white:hover {
@@ -563,17 +563,17 @@ h6 {
 
 #btn-in-touch {
   background-color: #FFF;
+  color: #BC519E;
   margin-bottom: 2rem;
   padding: 1rem 1.8rem;
-  color: #BC519E;
 }
 
 #btn-resume {
   background-color: #BC519E;
   border: 1.5px solid #FFF;
+  color: #FFF;
   margin-bottom: 2rem;
   padding: 1rem 1.8rem;
-  color: #FFF;
 }
 
 .footer-box {
@@ -634,11 +634,11 @@ h6 {
   }
 
   .footer-box {
+    align-items: center;
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: nowrap;
     justify-content: space-between;
-    align-items: center;
   }
 
   .social-media {
@@ -716,15 +716,15 @@ h6 {
 /* Project Pointer */
 
 .project-pointer {
-  top: 8rem;
+  margin-top: 2rem;
   position: relative;
   text-align: center;
-  margin-top: 2rem;
+  top: 8rem;
 }
 
 #pointer-text {
-  font-size: 1.8rem;
   font-family: 'Nunito', sans-serif;
+  font-size: 1.8rem;
   font-weight: 650;
   letter-spacing: 0.4rem;
 
@@ -766,11 +766,11 @@ h6 {
 /* Project Details */
 
 .project-info {
-  position: relative;
   color: white;
-  top: 9rem;
   height: 43rem;
-  margin: 0 auto
+  margin: 0 auto;
+  position: relative;
+  top: 9rem;
 }
 
 .project-info > h2 {
@@ -783,9 +783,9 @@ h6 {
 /* Case Study Button */
 
 #btn-case-study {
-  margin: 2rem 0 3rem 0;
   border: 1.5px solid #FFF;
   color: #FFF;
+  margin: 2rem 0 3rem 0;
   padding: 1.2rem 1.8rem;
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
@@ -822,9 +822,9 @@ h6 {
   }
 
   .project-info-hover {
-    width: 50%;
-    margin: 0 auto;
     color: #FFF;
+    margin: 0 auto;
+    width: 50%;
   }
 
   .project-info-hover > h2 {
@@ -840,24 +840,24 @@ h6 {
 
   .project-screen-wbkg {
     display: block;
-    width: 100%;
     height: auto;
+    width: 100%;
   }
 
   .project-display {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: auto;
-    width: 100%;
-    opacity: 0;
-    transition: none 0.15s ease-in-out;
     background-color: rgba(24, 48, 56, 0.9);
+    bottom: 0;
     display: flex;
     flex-direction: column;
+    height: auto;
     justify-content: center;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: none 0.15s ease-in-out;
+    right: 0;
+    width: 100%;
   }
 
   .project-section-desktop:hover .project-screen-wbkg  {
@@ -916,9 +916,9 @@ h6 {
 }
 
 .process-ux > img {
-  width: 80%;
   height: auto;
   margin: 2rem auto;
+  width: 80%;
 }
 
 .process-ui {
@@ -965,8 +965,8 @@ h6 {
 */
 
 .about-intro {
-  text-align: center;
   margin: 5rem 0;
+  text-align: center;
 }
 
 .about-intro > h2 {
@@ -987,8 +987,8 @@ h6 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 35rem;
   max-height: 35rem;
+  min-height: 35rem;
   position: relative;
 }
 
@@ -1027,8 +1027,8 @@ h6 {
   }
 
   .profile-text > .title {
-    margin-top: 0rem;
     margin-bottom: 1.5rem;
+    margin-top: 0rem;
   }
 }
 
@@ -1047,16 +1047,14 @@ h6 {
   }
 
   .about-last {
+    align-items:center;
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-gap: 6rem;
     margin: 4.5rem 0 3rem 0;
-    align-items:center;
     padding: 0;
   }
-
 }
-
 
 /*
 ###### SEAMHUB STYLING ######
@@ -1088,11 +1086,11 @@ h6 {
 }
 
 #raleway-text {
+  color: white;
   font-family: 'Raleway', sans-serif;
+  font-weight: 500;
   letter-spacing: 0.16rem;
   line-height: 1.7;
-  color: white;
-  font-weight: 500;
   margin: 4rem 0;
 }
 
@@ -1105,9 +1103,9 @@ h6 {
 }
 
 .call-to-action {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   margin-bottom: 5rem;
 }
 
@@ -1180,8 +1178,8 @@ h6 {
     justify-content: space-between;
     margin-bottom: 5rem;
     overflow: hidden;
-    text-align: center;
     padding: 2rem 20rem;
+    text-align: center;
   }
 
   #section-nav a {
@@ -1204,12 +1202,8 @@ h6 {
   }
 
   .sticky + .case-study-content {
-    margin-top: 8rem;
+    margin-top: 2rem;
   }
-
-  /* .placeholder {
-    height: 5rem;
-  } */
 }
 
 /* ### Overview ### */
@@ -1219,9 +1213,9 @@ h6 {
   border-right: solid 2px #487F84;
   border-bottom: solid 2px #487F84;
   border-radius: 2.1rem;
+  margin: 3rem auto;
   text-align: center;
   width: 30rem;
-  margin: 3rem auto;
 }
 
 .spec h5 {
@@ -1311,9 +1305,9 @@ h6 {
 
 .finding-grid {
   display: grid;
+  grid-gap: 1.5rem;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
-  grid-gap: 1.5rem;
 }
 
 .finding {
@@ -1371,8 +1365,8 @@ h6 {
 }
 
 .project-dir-box p {
-  text-align: center;
   font-weight: 600;
+  text-align: center;
 }
 
 .project-dir-box ol {
@@ -1410,48 +1404,48 @@ h6 {
 }
 
 blockquote {
-  font-family: 'lato', sans-serif;
-  font-weight: 550;
-  font-size: 1.6rem;
-  color: #4F3F4A;
-  display: block;
   border-width: 2px 0;
   border-style: solid;
   border-color: #D3DEDE;
+  color: #4F3F4A;
+  display: block;
+  font-family: 'lato', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 550;
   line-height: 1.6;
-  padding: 1.5rem 0 1.5rem;
   margin: 4rem auto;
-  position: relative;
   max-width: 100%;
+  padding: 1.5rem 0 1.5rem;
+  position: relative;
 }
 
 blockquote:before {
-  content: '\201C';
-  position: absolute;
-  top: -1rem;
-  left: 50%;
-  transform: translate(-50%, -50%);
   background: #fff;
-  width: 3rem;
-  height: 2rem;
-  font: 6em/1.08em 'PT Sans', sans-serif;
+  content: '\201C';
   color: #D3DEDE;
+  font: 6em/1.08em 'PT Sans', sans-serif;
+  height: 2rem;
+  left: 50%;
+  position: absolute;
   text-align: center;
+  top: -1rem;
+  transform: translate(-50%, -50%);
+  width: 3rem;
 }
 
 .persona-role {
-  text-align: center;
-  font-size: 2.2rem;
   color: #487F84;
+  font-size: 2.2rem;
   margin: 3rem 0 1rem 0;
+  text-align: center;
 }
 
 .persona-info {
-  text-align: center;
   font-family: 'nunito', sans-serif;
   font-size: 1.8rem;
   font-weight: 600;
   line-height: 1.4;
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -1462,8 +1456,8 @@ blockquote:before {
   }
 
   blockquote {
-    padding: 2rem 0 1.5rem 0;
     max-width: 95%;
+    padding: 2rem 0 1.5rem 0;
   }
 }
 
@@ -1477,9 +1471,9 @@ blockquote:before {
   }
 
   blockquote:before {
+    height: 3rem;
     top: -1rem;
     width: 5rem;
-    height: 3rem;
   }
 
   .persona h6 {
@@ -1520,8 +1514,8 @@ blockquote:before {
 }
 
 .comp-logo img {
-  max-width: 16rem;
   height: auto;
+  max-width: 16rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -1559,13 +1553,13 @@ blockquote:before {
 }
 
 .userflow-text p {
-  display: inline-block;
-  position: relative;
-  font-style: italic;
-  top: 2rem;
-  line-height: 3rem;
-  font-weight: 600;
   background-color: rgb(241, 241, 241, 0.6);
+  display: inline-block;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 3rem;
+  position: relative;
+  top: 2rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -1579,8 +1573,8 @@ blockquote:before {
   }
 
   .userflow-text p {
-    top: 4rem;
     line-height: 5rem;
+    top: 4rem;
   }
 }
 
@@ -1623,8 +1617,8 @@ blockquote:before {
 
 .seamhub-def {
   background-color: #183038;
-  margin-top: 2.5rem;
   color: white;
+  margin-top: 2.5rem;
   padding: 2.5rem 2.5rem;
   text-align: center;
 }
@@ -1634,25 +1628,25 @@ blockquote:before {
 }
 
 #big-arrow {
-  width: 20%;
   height: auto;
   margin: 1rem auto 0 auto;
+  width: 20%;
 }
 
 .logo-var {
-  width: 100%;
   margin-top: 2rem;
+  width: 100%;
 }
 
 @media screen and (min-width: 1024px) {
   .seamhub-def {
-    padding: 4rem 30rem;
     margin-top: 5rem;
+    padding: 4rem 30rem;
   }
 
   .moodboard {
-    width: 80%;
     margin: 0 auto;
+    width: 80%;
   }
 
   .logo-sketch-desktop {
@@ -1666,9 +1660,8 @@ blockquote:before {
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: 4fr 4fr 4fr 4fr;
-  margin: 3rem 0 5rem 0;
+    margin: 3rem 0 5rem 0;
   }
-
 }
 
 /* Typograhy */
@@ -1676,10 +1669,10 @@ blockquote:before {
 #raleway-box, #opensans-box {
   border: solid 1px #D9D9D9;
   border-radius: 20px;
-  width: 15.5rem;
   display: inline-block;
-  padding: 1rem 1rem;
   margin: 1rem 0 2.5rem 0;
+  padding: 1rem 1rem;
+  width: 15.5rem;
 }
 
 #opensans-box {
@@ -1695,8 +1688,8 @@ blockquote:before {
 }
 
 .font {
-  text-align: right;
   font-size: 1.4rem;
+  text-align: right;
 }
 
 .font-example {
@@ -1718,9 +1711,9 @@ blockquote:before {
 @media screen and (min-width: 1024px) {
 
   #raleway-box, #opensans-box {
-    width: 24rem;
-    padding: 1.5rem 1.5rem;
     margin: 3rem 0 1rem 0;
+    padding: 1.5rem 1.5rem;
+    width: 24rem;
   }
 
   #opensans-box {
@@ -1728,8 +1721,8 @@ blockquote:before {
   }
 
   .font {
-    text-align: right;
     font-size: 1.8rem;
+    text-align: right;
   }
 
   .font-example {
@@ -1752,17 +1745,17 @@ blockquote:before {
 }
 
 .color-text {
-    font-family: 'Nunito', sans-serif;
-    font-size: 1.2rem;
-    text-align: center;
-    margin-top: 1rem;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  text-align: center;
 }
 
 .color-shape {
   border-radius: 50%;
   height: 5.5rem;
-  width: 5.5rem;
   margin: 0 auto;
+  width: 5.5rem;
 }
 
 .oxford {
@@ -1831,9 +1824,9 @@ blockquote:before {
 }
 
 .ab-test img {
-  width: 90%;
   margin: 0 auto;
   padding-top: 2rem;
+  width: 90%;
 }
 
 .screen {
@@ -1848,8 +1841,8 @@ blockquote:before {
 }
 
 .mobile-size img {
-  width: 90%;
   margin: 0 auto;
+  width: 90%;
 }
 
 .screen-change {
@@ -1859,27 +1852,27 @@ blockquote:before {
 }
 
 .screen-change > h5 {
-  text-align: center;
-  margin-bottom: 2rem;
   line-height: 1;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 .screen-change > img {
-  width: 90%;
   margin: 0 auto;
+  width: 90%;
 }
 
 .number-icon {
-  max-width: 2.2rem;
   height: auto;
+  max-width: 2.2rem;
   vertical-align: top;
 }
 
 .change-details {
-  width: 95%;
-  padding-left: 2.5rem;
-  display: flex;
   align-items: flex-start;
+  display: flex;
+  padding-left: 2.5rem;
+  width: 95%;
 }
 
 .change-details p {
@@ -1918,8 +1911,8 @@ blockquote:before {
   }
 
   #center-text {
-    text-align: center;
     margin: 3rem 10rem;
+    text-align: center;
   }
 
   .screen-change {
@@ -1940,16 +1933,16 @@ blockquote:before {
   }
 
   .number-icon {
-    width: 3.3rem;
     height: auto;
     vertical-align: top;
+    width: 3.3rem;
   }
 
   .change-details {
-    width: 80%;
-    padding-left: 6rem;
-    display: flex;
     align-items: flex-start;
+    display: flex;
+    padding-left: 6rem;
+    width: 80%;
   }
 
   .change-details p {
