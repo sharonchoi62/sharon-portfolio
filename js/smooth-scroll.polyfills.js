@@ -102,7 +102,7 @@ if (window.Element && !Element.prototype.closest) {
 		// Speed & Easing
 		speed: 500,
 		clip: true,
-		offset: 500,
+		offset: 150,
 		easing: 'easeInOutCubic',
 		customEasing: null,
 

@@ -1205,10 +1205,13 @@ h1 .animated.fadeInDown.slower {
   }
 
   .sticky {
-    position: fixed;
+    position: sticky;
     top: -1rem;
-    width: 100%;
+    width: auto%;
     z-index: 100;
+    margin: 0 auto;
+    margin-left: -20rem;
+    margin-right: -20rem;
   }
 
   .sticky + .case-study-content {
@@ -1843,7 +1846,7 @@ blockquote:before {
 }
 
 .screen {
-  background-color: #4BB8C9;
+  background-color: #D3DEDE;
   margin: 2rem -2.5rem;
   padding: 2rem 0;
 }
@@ -1859,7 +1862,7 @@ blockquote:before {
 }
 
 .screen-change {
-  background-color: #EBA85D;
+  background-color: #D3DEDE;
   margin: 2rem -2.5rem;
   padding: 3rem 0;
 }
@@ -1929,7 +1932,7 @@ blockquote:before {
   }
 
   .screen-change {
-    background-color: #EBA85D;
+    background-color: #D3DEDE;
     border-radius: 2rem;
     margin: 2rem auto;
     padding: 3rem 0;
